@@ -23,6 +23,7 @@ body {
     font-family: "Droid Sans", sans-serif;
     background: url('../images/header-bg-dark.jpg') repeat-x;
     vertical-align: baseline;
+    color: #333;
 }
 
 /* --- Header ----- */
@@ -67,7 +68,7 @@ body {
     z-index: 1;
     height: inherit;
     top: -4px;
-    overflow: auto;
+    overflow: hidden;
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -79,6 +80,14 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     padding: 8px;
+}
+
+h1, h3 {
+    color: #576973;
+}
+
+h2 {
+    color: #949576;
 }
 
 .content .grid_1.lft {
@@ -102,7 +111,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .content .grid_3.prefix_1 {
-    padding-left: 0;
+    padding-left: 1%;
     margin-left: 9.333%;
 }
 
@@ -136,13 +145,24 @@ footer p {
 }
 
 /* --- Topographic ----- */
-h1 {
-    font-size: 200%;
+h1, h2, h3 {
     font-weight: bold;
+}
+
+p {
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 250%;
     line-height: 1em;
 }
 
 h2 {
-    font-weight: bold;
+    font-size: 175%;
+    padding: 0.5em 8px 0;
+}
+
+h3 {
     line-height: 2.5em;
 }
