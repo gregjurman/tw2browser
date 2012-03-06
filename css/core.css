@@ -15,6 +15,7 @@
 }
 
 html, body {
+    min-height: 100%;
     height: 100%;
 }
 
@@ -27,56 +28,51 @@ body {
 }
 
 /* --- Header ----- */
-.header {
-    margin-left: 9.333%;
-    margin-right: 9.333%;
-    background: url('../images/header-bg.jpg') repeat-x;
-    height: 86px;
-}
-
 #tw-logo {
     padding-top: 8px;
     padding-left: 4px;
 }
 
-.container_12 .head {
-    height: 86px;
+.container_10 {
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 3px 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 3px 6px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 3px 6px rgba(0,0,0, 0.2);
+}
+
+.container_10 .head {
+    height: 82px;
+    z-index: 1000;
     background: url('../images/header-bg.jpg') repeat-x;
 }
 
-.container_12 .grid_6.head {
-    margin-right: 0;
-    margin-left: 9.333%;
-    padding-left: 0;
-    width: 49%;
-    z-index: 3;
+.head.lft, .head.rght, .body.lft, .body.rght {
+    margin: 0;
+    padding: 0 10px;
 }
 
-.container_12 .grid_4.head {
-    margin-left: 0;
-    margin-right: 9.333%;
-    padding-right: 0;
-    width: 32.333%;
-    z-index: 3;
+.grid_10.drop-sliver {
+    z-index: 500;
+    -webkit-box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 2px 3px rgba(0,0,0, 0.2);
+    height: 0px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.body.rght {
+    padding: 0 10px 0 9px;
+}
+
+.body.lft {
+    background-color: #f5f5f5;
+    border-right-style: solid;
+    border-right-color: #dce0e3;
+    border-right-width: 1px;
 }
 
 /* --- Body content ----- */
-
-.content {
-    vertical-align: baseline;
-    position: relative;
-    z-index: 1;
-    height: inherit;
-    top: -4px;
-    overflow: hidden;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-}
-
-.content div {
-    padding-top: 1em;
-}
 
 h1, h2, h3, h4, h5, h6, p {
     padding: 8px;
@@ -90,50 +86,10 @@ h2 {
     color: #949576;
 }
 
-.content .grid_1.lft {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: url('../images/backshadow-left.png') right top repeat-y;
-    margin-right: 0;
-    padding-right: 2%;
-    bottom: 0;
-}
-
-.content .grid_3 {
-    background-color: #f5f5f5;
-    margin-left: 0;
-    bottom: 0;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-}
-
-.content .grid_3.prefix_1 {
-    padding-left: 1%;
-    margin-left: 9.333%;
-}
-
-.content .grid_7 {
-    margin-right: 0;
-}
-
-.content .grid_1.rght {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../images/backshadow-right.png') left top repeat-y;
-    margin-left: 0;
-    padding-left: 2%;
-}
-
-
 /* --- Footer ----- */
 footer {
     height: 2em;
-    margin-top: -4px;
+    margin-top: 0px;
     border-style: solid;
     border-top-width: 1px;
     background-color: #FFF;
@@ -164,5 +120,5 @@ h2 {
 }
 
 h3 {
-    line-height: 2.5em;
+    line-height: 3.5em;
 }
