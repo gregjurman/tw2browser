@@ -23,7 +23,6 @@ html, body {
 body {
     font-family: "Droid Sans", sans-serif;
     background: url('../images/header-bg-dark.jpg') repeat-x;
-    vertical-align: baseline;
     color: #333;
 }
 
@@ -61,11 +60,25 @@ body {
     padding: 0 10px;
 }
 
-.body.rght {
-    padding: 0 10px 0 9px;
+.container_10 .grid_7.body.rght {
+    padding-left: 308px;
+    padding-right: 20px;
+    width: 622px;
+}
+
+.content {
+    overflow: hidden;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
 }
 
 .body.lft {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     background-color: #f5f5f5;
     border-right-style: solid;
     border-right-color: #dce0e3;
@@ -75,15 +88,25 @@ body {
 /* --- Body content ----- */
 
 h1, h2, h3, h4, h5, h6, p {
-    padding: 8px;
+    padding: 8px 0 0 10px;
+    vertical-align: text-bottom;
 }
 
-h1, h3 {
-    color: #576973;
+ul, li {
+    padding-left: 16px;
 }
 
-h2 {
+.module-list li {
+    font-weight: bold;
     color: #949576;
+    padding-bottom: 16px;
+}
+
+.module-detail-list li {
+    font-weight: normal;
+    color: #333;
+    padding-top: 8px;
+    padding-bottom: 0;
 }
 
 /* --- Footer ----- */
@@ -96,6 +119,7 @@ footer {
 }
 
 footer p {
+    padding: 0 0.25em;
     text-align: right;
     background-color: #FFF;
 }
@@ -103,22 +127,24 @@ footer p {
 /* --- Topographic ----- */
 h1, h2, h3 {
     font-weight: bold;
+    line-height: 48px;
+    color: #576973;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+h2 {
+    font-size: 175%;
+    color: #949576;
+}
+
+h3 {
+    padding-top: 16px;
 }
 
 p {
     line-height: 2em;
 }
 
-h1 {
-    font-size: 250%;
-    line-height: 1em;
-}
-
-h2 {
-    font-size: 175%;
-    padding: 0.5em 8px 0;
-}
-
-h3 {
-    line-height: 3.5em;
-}
