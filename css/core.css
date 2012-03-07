@@ -60,10 +60,15 @@ body {
     padding: 0 10px;
 }
 
+.container_10 .grid_3.body.lft {
+    z-index: 4;
+}
 .container_10 .grid_7.body.rght {
     padding-left: 308px;
     padding-right: 20px;
     width: 622px;
+    z-index: 1;
+    padding-bottom: 1em;
 }
 
 .content {
@@ -87,9 +92,19 @@ body {
 
 /* --- Body content ----- */
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, th, td, dl {
     padding: 8px 0 0 10px;
     vertical-align: text-bottom;
+}
+
+
+.params-table th {
+    text-align: right;
+    line-height: 2em;
+}
+
+.params-table td {
+    line-height: 2em;
 }
 
 ul, li {
@@ -144,7 +159,20 @@ h3 {
     padding-top: 16px;
 }
 
-p {
+dd {
+    line-height: 2em;
+    padding-left: 16px;
+}
+
+dt, dl {
     line-height: 2em;
 }
 
+p {
+    line-height: 2em;
+    padding-left: 12px;
+}
+
+b {
+    font-weight: bold;
+}

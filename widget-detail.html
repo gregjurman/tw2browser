@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <script type="text/javascript">
+            WebFontConfig = {
+                google: { families: [ 'Droid+Sans:400,700:latin' ] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })();
+        </script>
+		<link rel="icon" type="image/png" href="" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/core.css" />
+        <link rel="stylesheet" type="text/css" href="css/grid.css" />
+        <link rel="stylesheet" type="text/css" href="css/pygments.css" />
+
+		<script type="text/javascript" src="js/lib/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/less-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.min.js"></script>
+		
+		<title>ToscaWidgets2 Browser</title>
+	</head>
+
+	<body>
+        <div class="container_10">
+            <div class="grid_6 head lft">
+                <img id="tw-logo" src="images/toscawidgets-logo.jpg"/>
+            </div>
+            <div class="grid_4 head rght">
+            </div>
+            <div class="clearfix"></div>
+            <div class="grid_10 drop-sliver">
+            </div>
+            <div class="content">
+                <div class="grid_3 lft body">
+                    <h3>Modules</h3>
+                    <ul class="module-list">
+                        <li><a href="module-desc.html">tw2.dyntext</a>
+                            <ul class="module-detail-list">
+                                <li><a href="widget-detail.html">PollingDynamicTextWidget</a></li>
+                                <li>DynamicTextWidget</li>
+                            </ul>
+                        </li>
+                        <li>tw2.polymaps
+                            <ul class="module-detail-list" style="display:none;">
+                                <li>PollingDynamicTextWidget</li>
+                                <li>DynamicTextWidget</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid_7 prefix_3 rght body">
+                    <h1>PollingDynamicTextWidget</h1>
+                    <h2>Description</h2>
+<p>Click headers to expand/collapse content that is broken into
+logical sections, much like tabs. Optionally, toggle sections
+open/closed on mouseover.</p>
+<p>The underlying HTML markup is a series of headers (H3 tags) and
+content divs so the content is usable without JavaScript.</p>
+<dl class="docutils">
+<dt>See the wrapped library's documentation for more information:</dt>
+<dd><a href="http://jqueryui.com/demos/accordion/" class="reference external">http://jqueryui.com/demos/accordion/</a></dd>
+<dt>List of options passable to the <tt class="docutils literal">options</tt> parameter</dt>
+<dd><dl class="first last docutils">
+
+<dt>disabled -- boolean (default: False)</dt>
+<dd>Disables (true) or enables (false) the accordion. Can be set
+when initialising (first creating) the accordion.</dd>
+<dt>active -- selector, element, jQuery, boolean, number (default: first child)</dt>
+<dd>Selector for the active element. Set to false to display none at
+start. Needs <tt class="docutils literal">collapsible: true</tt>.</dd>
+<dt>animated -- boolean, str (default: 'slide')</dt>
+<dd>Choose your favorite animation, or disable them (set to false). In
+addition to the default, 'bounceslide' and all defined easing
+methods are supported ('bounceslide' requires UI Effects Core).</dd>
+<dt>autoHeight -- boolean (default: True)</dt>
+<dd>If set, the highest content part is used as height reference
+for all other parts. Provides more consistent animations.</dd>
+
+<dt>clearStyle -- boolean (default: False)</dt>
+<dd>If set, clears height and overflow styles after finishing
+animations. This enables accordions to work with dynamic content.
+Won't work together with autoHeight.</dd>
+<dt>collapsible -- boolean (default: False)</dt>
+<dd>Whether all the sections can be closed at once. Allows collapsing
+the active section by the triggering event (click is the default).</dd>
+<dt>event -- str (default: 'click')</dt>
+<dd>The event on which to trigger the accordion.</dd>
+<dt>fillSpace -- boolean (default: False)</dt>
+<dd>If set, the accordion completely fills the height of the parent
+element. Overrides autoheight.</dd>
+<dt>header -- selector, jQuery (default: '&gt; li &gt; :first-child,&gt; :not(li):even')</dt>
+
+<dd>Selector for the header element.</dd>
+<dt>icons -- dict (default: {'header': 'ui-icon-triangle-1-e', 'headerSelected': 'ui-icon-triangle-1-s'})</dt>
+<dd>Icons to use for headers. Icons may be specified for 'header'
+and 'headerSelected', and we recommend using the icons native
+to the jQuery UI CSS Framework manipulated by jQuery UI
+ThemeRoller.</dd>
+<dt>navigation -- boolean (default: False)</dt>
+<dd>If set, looks for the anchor that matches location.href and
+activates it. Great for href-based state-saving. Use
+navigationFilter to implement your own matcher.</dd>
+<dt>navigationFilter -- javascript string (default: '')</dt>
+<dd>Overwrite the default location.href-matching with your own matcher.</dd>
+</dl>
+</dd>
+</dl>
+                    <h2>Settings</h2>
+                        <table class="params-table">
+                            <tr>
+                                <th><b>id</b></th>
+                                <td>Widget identifier.</td>
+                            </tr>
+                            <tr>
+                                <th>cloudmade_api_key</th>
+                                <td>Developer API key for cloudmade tiles.</td>
+                            </tr>
+                            <tr>
+                                <th>center_range</th>
+                                <td>A list of dicts specifying the south-west and north-east corners of *constraints* on the range. The value should be of the following form:: [{'lat': -85.05112, 'lon': -120.0}, {'lat': +85.05212, 'lon': +120.0}] (default: None)</td>
+                            </tr>
+                            <tr>
+                                <th>options</th>
+                                <td>(dict) A dict of options to pass to the widget (default: {})</td>
+                            </tr>
+                        </table>
+                    <h2>Example</h2>
+                    <p>
+                        Widget Example goes here
+                    </p>
+                    <h2>Example Code</h2>
+<div class="syntax">
+
+                <div class="highlight"><pre><span class="sd">&quot;&quot;&quot; The most basic form with ToscaWidgets 2 &quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">tw2.core</span> <span class="kn">as</span> <span class="nn">twc</span>
+<span class="kn">import</span> <span class="nn">tw2.forms</span> <span class="kn">as</span> <span class="nn">twf</span>
+
+<span class="k">class</span> <span class="nc">MovieForm</span><span class="p">(</span><span class="n">twf</span><span class="o">.</span><span class="n">FormPage</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&#39;Movie&#39;</span>
+
+    <span class="k">class</span> <span class="nc">child</span><span class="p">(</span><span class="n">twf</span><span class="o">.</span><span class="n">TableForm</span><span class="p">):</span>
+        <span class="nb">id</span> <span class="o">=</span> <span class="n">twf</span><span class="o">.</span><span class="n">HiddenField</span><span class="p">()</span>
+
+        <span class="n">title</span> <span class="o">=</span> <span class="n">twf</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">validator</span><span class="o">=</span><span class="n">twc</span><span class="o">.</span><span class="n">Required</span><span class="p">)</span>
+
+        <span class="n">director</span> <span class="o">=</span> <span class="n">twf</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+        <span class="n">genres</span> <span class="o">=</span> <span class="n">twf</span><span class="o">.</span><span class="n">CheckBoxList</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span>
+
+            <span class="s">&#39;Action&#39;</span><span class="p">,</span> <span class="s">&#39;Comedy&#39;</span><span class="p">,</span> <span class="s">&#39;Romance&#39;</span><span class="p">,</span> <span class="s">&#39;Sci-fi&#39;</span>
+        <span class="p">])</span>
+        <span class="k">class</span> <span class="nc">cast</span><span class="p">(</span><span class="n">twf</span><span class="o">.</span><span class="n">GridLayout</span><span class="p">):</span>
+
+            <span class="n">extra_reps</span> <span class="o">=</span> <span class="mi">5</span>
+            <span class="n">character</span> <span class="o">=</span> <span class="n">twf</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+
+            <span class="n">actor</span> <span class="o">=</span> <span class="n">twf</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+</pre></div>
+
+
+              </div>
+            </div>
+
+                </div>
+            </div>
+            <div class="clear">&nbsp;</div>
+            <div class="grid_10 foot">&nbsp;</div>
+        </div>
+        <footer>
+            <p>ToscaWidgets Footer</p>
+        </footer>
+	</body>
+</html>
